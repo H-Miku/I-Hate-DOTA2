@@ -1,0 +1,268 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  line-height: 1.8;
+  padding: 0;
+}
+
+/* Navbar */
+/*.navbar {
+  background-color: #111;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: #e74c3c; 
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Video Section */
+.video-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #111;
+  margin-bottom: 40px;
+}
+
+.video-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #e74c3c; /* Dota 2 red */
+}
+
+.video-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+.video-section video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+}
+
+/* Main Article Section */
+.main-article {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 20px;
+}
+
+.main-article h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e74c3c;
+}
+
+.article-meta {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.main-article p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+blockquote {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: #222;
+  border-left: 5px solid #e74c3c;
+  font-style: italic;
+  color: #ddd;
+}
+
+/* Article Images */
+.article-image {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid #e74c3c;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+  object-fit: cover; /* Ensures all images have the same aspect ratio */
+  height: 400px; /* Set a fixed height for all images */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+}
+
+.navbar .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.navbar nav ul li {
+  margin-left: 20px;
+}
+
+.navbar nav ul li a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-size: 18px; /* Slightly larger font for navbar items */
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.navbar nav ul li a:hover {
+  background-color: #4CAF50; 
+}
+
+/* Login and Register Popup */
+.login-popup {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px); /* Glassmorphism effect */
+}
+
+.login-popup form {
+  background: rgba(31, 31, 31, 0.8); /* Dark semi-transparent background */
+  padding: 40px; /* Increased padding for larger form */
+  border-radius: 15px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+  width: 400px; /* Increase form width */
+  max-width: 90%;
+  backdrop-filter: blur(20px); /* Stronger glass effect */
+}
+
+h2.login-header {
+  font-size: 30px; /* Increase header font size */
+  text-align: center;
+  margin-bottom: 25px; /* Increase space below the header */
+  color: #fff;
+}
+
+.input-container {
+  margin-bottom: 25px; /* Increase space between inputs */
+  position: relative;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 15px; /* Larger padding for inputs */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent input */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: white;
+  font-size: 18px; /* Larger font size for inputs */
+  box-sizing: border-box;
+}
+
+.input-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Light placeholder text */
+}
+
+.input-container i {
+  position: absolute;
+  left: 12px;
+  top: 18px;
+  color: rgba(255, 255, 255, 0.6); /* Light icon color */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 18px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px; /* Increased margin-bottom for space between checkbox/link and login button */
+}
+
+.remember-forgot label {
+  font-size: 16px; /* Slightly larger text for remember me */
+}
+
+.remember-forgot a {
+  font-size: 16px; /* Larger text for links */
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background-color: #e74c3c;
+  color: white;
+  width: 100%;
+  padding: 15px; /* Larger button */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px; /* Larger font size for button */
+}
+
+.login-btn:hover {
+  background-color: #45a049;
+}
+
+p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px; /* Larger text for paragraph */
+}
